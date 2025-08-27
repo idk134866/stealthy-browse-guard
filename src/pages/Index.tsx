@@ -1,14 +1,21 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import StealthBrowser from "@/components/StealthBrowser";
+import { useEffect } from "react";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
+  useEffect(() => {
+    // Set up keyboard shortcut for stealth mode
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.altKey && e.key === 's') {
+        e.preventDefault();
+        // This will be handled by the StealthBrowser component
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
+
+  return <StealthBrowser />;
 };
 
 export default Index;

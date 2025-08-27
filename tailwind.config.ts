@@ -24,6 +24,14 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				stealth: {
+					bg: 'hsl(var(--stealth-bg))',
+					surface: 'hsl(var(--stealth-surface))',
+					accent: 'hsl(var(--stealth-accent))',
+					'accent-glow': 'hsl(var(--stealth-accent-glow))',
+					text: 'hsl(var(--stealth-text))',
+					'text-muted': 'hsl(var(--stealth-text-muted))',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -67,6 +75,14 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-surface': 'var(--gradient-surface)',
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'elevated': 'var(--shadow-elevated)',
 			},
 			keyframes: {
 				'accordion-down': {
